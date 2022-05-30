@@ -1,0 +1,135 @@
+.grid{
+  display: grid;
+  height: 100%;
+  grid-template: minmax(100px, 20%) 1fr / minmax(50px, 15%) 1fr;
+  grid-template-areas:
+  "dashboard header"
+  "dashboard content"
+}
+
+.header{
+  grid-area: header;
+  background-color: blue;
+}
+
+.dashboard{
+  grid-area: dashboard;
+  background-color: #1892d5;
+}
+
+.dashboard-title{
+  font-size: 1rem;
+  letter-spacing: -0.01rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dashboard-logo{
+  font-size: 1.3rem;
+}
+
+.dashboard-card{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  align-items: center;
+
+
+}
+
+.content{
+  grid-area: content;
+  background-color: grey;
+  display: grid;
+  height: 100%;
+  grid-template: 1fr 1fr 1fr 1fr / 2fr 1fr;
+  grid-template-areas:
+  "projects announcements"
+  "projects announcements"
+  "projects trending"
+  "projects trending"
+}
+
+.projects{
+  grid-area: projects;
+  background-color: #e3e8f1;
+  display: grid;
+  padding: 1rem;
+  height: 100%;
+  grid-auto-rows: auto;
+  grid-template: 15px 1fr 1fr 1fr / 1fr minmax(200px, 1fr)r;
+  gap: 20px;
+  grid-template-areas:
+  "project-title project-title"
+  "project-card project-card"
+  "project-card project-card"
+  "project-card project-card"
+}
+
+
+.project-title{
+  grid-area: project-title;
+
+}
+
+.project-header{
+font-size: 1rem;
+
+}
+
+.project-card{
+  background-color: #ffffff;
+  border-left: 5px solid #f0bb3c;
+  border-radius: 5px;
+  box-shadow: 2px 2px  2px #d1d6df;
+  grid-area: "project-card";
+  display: flex;
+  flex-direction: column;
+  padding:  1.5rem;
+
+}
+
+.project-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.view-icon, .share-icon, .star-icon{
+  width: 20px;
+  height: 20px;
+  margin: 1rem;
+}
+
+.plus-icon{
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+  filter: invert(83%) sepia(38%) saturate(871%) hue-rotate(338deg) brightness(95%) contrast(98%);
+}
+
+.project-addproject{
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px  2px #d1d6df;
+  grid-area: "project-card";
+}
+
+.announcements{
+  grid-area: announcements;
+  background-color: teal;
+}
+
+.trending{
+  grid-area: trending;
+  background-color: peachpuff;
+}
+
+.wrapper{
+  height: 100vh;
+}
